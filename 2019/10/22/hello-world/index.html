@@ -199,6 +199,45 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 <div class="col-lg-7 mx-auto nopadding-md">
   <div class="container comments mx-auto" id="comments">
     
+      <br><br>
+      
+      
+  <div id="vcomments" style="width: 90%; margin: 0 auto;"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  
+    <script>
+      document.getElementById('visitors-text').innerText = '本文阅读数：';
+      document.getElementById('visitors-count').className = 'leancloud-visitors-count';
+    </script>
+  
+
+  <script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "V1s6e4zjW3buOlz9EXT5P9aC-gzGzoHsz",
+        app_key: "CNNux6v8cGARzrfl3hqBeQ08",
+        placeholder: "说点什么",
+        avatar: "retro",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+        visitor: "true"
+      });
+      oldLoad && oldLoad();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+    
   </div>
 </div>
 

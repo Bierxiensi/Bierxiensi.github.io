@@ -133,7 +133,30 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <img src="/img/2.jpg" srcset="/img/loading.gif" width=100% />
+            <blockquote><p>content</p>
+<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>
+
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+
+<p>引用 Twitter</p>
+<blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a></p>
+<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="noopener">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
+
+<p>gist</p>
+<script src="//gist.github.com/199bc1a29687f7ae6da0180836b5354b.js?file=find"></script>
+<script src="//gist.github.com/e95044ca4535fc4c268c41458bf4cc32.js?file=listen1_myplaylist_2782ed18-652e-be76-614c-af33c7deb4e8.md"></script>  
+<script src="//gist.github.com/e95044ca4535fc4c268c41458bf4cc32.js?file=listen1_myplaylist_32e123f4-59ed-907c-ad9f-9c3c77cb80b1.md"></script>  
+
+<p>网易云</p>
+<iframe src="//music.163.com/outchain/player?type=0&id=2025535275&auto=1&height=90" width="[width]" height="[height]" frameborder="0" allowfullscreen></iframe>
+
+
+
+<img src="/img/2.jpg" srcset="/img/loading.gif" width=100% />
 <a id="more"></a>
 
 <img src="/img/2.jpg" srcset="/img/loading.gif" class="[class names]" title="[width] [height] title text " alt="alt text">
@@ -217,6 +240,45 @@ http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg
 <!-- Comments -->
 <div class="col-lg-7 mx-auto nopadding-md">
   <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <div id="vcomments" style="width: 90%; margin: 0 auto;"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  
+    <script>
+      document.getElementById('visitors-text').innerText = '本文阅读数：';
+      document.getElementById('visitors-count').className = 'leancloud-visitors-count';
+    </script>
+  
+
+  <script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "V1s6e4zjW3buOlz9EXT5P9aC-gzGzoHsz",
+        app_key: "CNNux6v8cGARzrfl3hqBeQ08",
+        placeholder: "说点什么",
+        avatar: "retro",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+        visitor: "true"
+      });
+      oldLoad && oldLoad();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
     
   </div>
 </div>
