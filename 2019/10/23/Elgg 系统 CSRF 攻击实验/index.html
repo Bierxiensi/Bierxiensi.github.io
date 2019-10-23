@@ -15,7 +15,7 @@
   <meta name="description" content="zxyaily">
   <meta name="author" content="zxy">
   <meta name="keywords" content="">
-  <title>分类 - javaScript ~ zxyaily</title>
+  <title>Elgg 系统 CSRF 攻击实验 ~ zxyaily</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -40,7 +40,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -100,7 +100,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/4.jpg')no-repeat center center;
+         style="background: url('/img/Elgg 系统 CSRF 攻击实验.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -110,6 +110,9 @@
               
             </span>
 
+            
+              <br>
+              <p class="mt-3">星期三, 十月 23日 2019, 9:34 上午</p>
             
           </div>
 
@@ -121,39 +124,76 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
-  <hr>
-  
-    
       
-      <p class="h5">2018</p>
-    
-    <a href="/2018/04/25/test1/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">测试1</span>
-      <span style="float: right;">04-25</span>
-    </a>
-  
-    
-    <a href="/2018/04/25/test/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">测试</span>
-      <span style="float: right;">04-25</span>
-    </a>
-  
-</div>
-              </div>
-            </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>CSRF攻击涉及用户受害者、受信任的网站和恶意网站。<br>当受害者与受信任的站点拥有一个活跃的会话的同时，如果访问恶意网站，<br>恶意网站会注入一个HTTP请求到受信任的站点，从而破话用户的信息。</p>
+<a id="more"></a>
+
+<p>#实验背景<br>CSRF 攻击总是涉及到三个角色：信赖的网站（Collabtive）、受害者的 session 或 cookie 以及一个恶意网站。<br>受害者会同时访问恶意网站与受信任的站点会话的时候。攻击包括一系列步骤，如下:</p>
+<p>-受害者用户使用他/她的用户名和密码登录到可信站点,从而创建一个新的会话。<br>-受信任站点存储受害者会话的 cookie 或 session 在受害者用户的 web 浏览器端。<br>-受害者用户在不退出信任网站时就去访问恶意网站。<br>-恶意网站的网页发送一个请求到受害者的受信任的站点用户的浏览器。<br>-web 浏览器将自动连接会话 cookie，因为它是恶意的要求针对可信站点。<br>-受信任的站点如果受到 CSRF 攻击，攻击者的一些恶意的请求会被攻击者发送给信任站点。<br>恶意网站可以建立HTTP GET或POST请求到受信任的站点。一些HTML标签,比如img iframe,框架,形式没有限制的URL,<br>可以在他们的使用属性中。img,iframe,框架可用于构造GET请求。<br>HTML表单标签可用于构造POST请求。构造GET请求是相对容易的,因为它甚至不需要JavaScript的帮助;<br>构造POST请求需要JavaScript。因为Collabtive只针对后者,本实验的任务将只涉及HTTP POST请求。</p>
+<p>#预备知识：什么是CSRF</p>
+<blockquote>
+<p>百度百科–CSRF<br>CSRF(Cross-site request forgery)：中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF；<br>作用：攻击者盗用了你的身份，以你的名义发送恶意请求；<br>造成的危害包括：个人隐私泄露以及财产安全，以受害者的名义发送邮件、消息、盗取账号，甚至于购买商品，虚拟货币转账等。</p>
+</blockquote>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+              <p>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8">信息安全</a>
+                  &nbsp;
+                
+              </p>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/web%E5%AE%89%E5%85%A8">web安全</a>
+              
+              <span id="/2019/10/23/Elgg 系统 CSRF 攻击实验/" class="visitors leancloud_visitors" data-flag-title="Elgg 系统 CSRF 攻击实验">
+                <em id="visitors-text" class="post-meta-item-text"></em>
+                <i id="visitors-count"></i>
+              </span>
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -208,6 +248,11 @@
   <script src="/js/lazyload.js" ></script>
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -224,7 +269,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "分类 - javaScript&nbsp;",
+        "Elgg 系统 CSRF 攻击实验&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
