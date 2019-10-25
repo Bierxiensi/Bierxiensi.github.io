@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>大事记</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" type="text/css" src="./css/">
+<style>
+    #app {
+        padding: 30px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, 210px);
+        margin-bottom: 15px;
+    }
+    .card{
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow:2px 2px 5px #c3bac3;
+    }
+    h1{
+        background-image:-webkit-linear-gradient(bottom, #ffd6ca, #ffd6ca, #e5d4c9);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+    }
+    h2{
+        background-image:-webkit-linear-gradient(bottom, #c3bac3, #f7c49c, #e1e6ed);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+    }
+    .span1{
+        background-image: -webkit-linear-gradient(bottom, rgb(255, 212, 209), rgb(255, 166, 174));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .span2{
+        background-image: -webkit-linear-gradient(bottom, rgb(25, 190, 255), rgb(41, 79, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #content {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        overflow: hidden;
+        position: absolute;
+    }
+    #snowflake {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .snowRoll {
+        position: absolute;
+        opacity: 0;
+        -webkit-animation-name: mysnow;
+        -webkit-animation-duration: 20s;
+        -moz-animation-name: mysnow;
+        -moz-animation-duration: 20s;
+        height: 80px;
+    }
+    @-webkit-keyframes mysnow {
+        0% {
+            bottom: 100%;
+        }
+        50% {
+            -webkit-transform: rotate(1080deg);
+        }
+        100% {
+            -webkit-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+        }
+    }
+    @-moz-keyframes mysnow {
+        0% {
+            bottom: 100%;
+        }
+        50% {
+            -moz-transform: rotate(1080deg);
+        }
+        100% {
+            -moz-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+        }
+    }
+</style>
+</head>
+<body>
+<div id='content'>
+    <!-- 飘花 -->
+    <div id="snowflake">
+        <div style="text-align: center">
+            <h1>在一起要做的100件事</h1>
+            <h2>山有云烟，鸟有碧海青天；冬有睡眠，秋有暗香无边；故事有流年，我们的未来还长远</h2>
+        </div>
+        <div id="app">
+            <!--line 1-->
+            <div class="card"><i class="el-icon-circle-check"></i><span class="span1">给对方写信</span><img alt="" src="images/letter.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去云端餐厅</span><img alt="" src="images/building.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起过七夕节</span><img alt="" src="images/together/七夕.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起做饭</span><img alt="" src="images/together/做饭.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起工作</span><img alt="" src="images/together/写信.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去划船</span><img alt="" src="images/together/划船.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起看烟花</span><img alt="" src="images/together/大型焰火燃放许可.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去海边</span><img alt="" src="images/together/大海.png"></div>
+            <!--line 2-->
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起去天安门 </span><img alt="" src="images/together/天安门.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">婚</span><img alt="" src="images/together/婚庆.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起放孔明灯</span><img alt="" src="images/together/孔明灯.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起学习</span><img alt="" src="images/together/学习.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span>一起去爬山(五岳)</span><img alt="" src="images/together/山峰.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起去过情人节</span><img alt="" src="images/together/情人节01.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">给对方唱歌</span><img alt="" src="images/together/情歌.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去坐摩天轮</span><img alt="" src="images/together/摩天轮.png"></div>
+            <!--line 3-->
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去度假</span><img alt="" src="images/together/旅游.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去海底世界</span><img alt="" src="images/together/海豚.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起享用烛光晚餐</span><img alt="" src="images/together/烛光晚餐.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起坐热气球</span><img alt="" src="images/together/热气球.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">过生日啦</span><img alt="" src="images/together/生日.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起看电影</span><img alt="" src="images/together/电影.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起荡秋千</span><img alt="" src="images/together/秋千.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去自驾游</span><img alt="" src="images/together/自驾游.png"></div>
+            <!--line 4-->
+            <div class="card"><i class="el-icon-error"></i><span class="span2">一起去捡贝壳</span><img alt="" src="images/together/贝壳.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起dancing</span><img alt="" src="images/together/跳舞.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起过新年</span><img alt="" src="images/together/过年好.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起堆雪人</span><img alt="" src="images/together/雪人.png"></div>
+            <div class="card"><i class="el-icon-error"></i><span class="span1">一起去听音乐会</span><img alt="" src="images/together/音乐会.png"></div>
+            <div class="card"><i class="el-icon-error"></i>测试数据<img alt="" src="images/测试.png"></div>
+            <div class="card"><i class="el-icon-error"></i>建设中......<img alt="" src="images/测试.png"></div>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app'
+    });
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.transit.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var snowflakeURl = [
+            './images/icon_petal_1.png',
+            './images/icon_petal_2.png',
+            './images/icon_petal_3.png',
+            './images/icon_petal_4.png',
+            './images/icon_petal_5.png',
+            './images/icon_petal_6.png',
+            './images/icon_petal_7.png',
+            './images/icon_petal_8.png'
+        ]
+        var container = $("#content");
+        visualWidth = container.width();
+        visualHeight = container.height();
+        //获取content的宽高
+        function snowflake() {
+            // 雪花容器
+            var $flakeContainer = $('#snowflake');
+
+            // 随机六张图
+            function getImagesName() {
+                return snowflakeURl[[Math.floor(Math.random() * 8)]];
+            }
+            // 创建一个雪花元素
+            function createSnowBox() {
+                var url = getImagesName();
+                return $('<div class="snowbox" />').css({
+                    'width': 25,
+                    'height': 26,
+                    'position': 'absolute',
+                    'backgroundRepeat':'no-repeat',
+                    'zIndex': 100000,
+                    'top': '-41px',
+                    'backgroundImage': 'url(' + url + ')'
+                }).addClass('snowRoll');
+            }
+            // 开始飘花
+            setInterval(function() {
+                // 运动的轨迹
+                var startPositionLeft = Math.random() * visualWidth - 100,
+                    startOpacity    = 1,
+                    endPositionTop  = visualHeight - 40,
+                    endPositionLeft = startPositionLeft - 100 + Math.random() * 500,
+                    duration        = visualHeight * 10 + Math.random() * 5000;
+                // 随机透明度，不小于0.5
+                var randomStart = Math.random();
+                randomStart = randomStart < 0.5 ? startOpacity : randomStart;
+                // 创建一个雪花
+                var $flake = createSnowBox();
+                // 设计起点位置
+                $flake.css({
+                    left: startPositionLeft,
+                    opacity : randomStart
+                });
+                // 加入到容器
+                $flakeContainer.append($flake);
+                // 开始执行动画
+                $flake.transition({
+                    top: endPositionTop,
+                    left: endPositionLeft,
+                    opacity: 0.7
+                }, duration, 'ease-out', function() {
+                    $(this).remove() //结束后删除
+                });
+            }, 500);
+        }
+        snowflake()
+        //执行函数
+    })
+</script>
+</body>
+</html>
+
