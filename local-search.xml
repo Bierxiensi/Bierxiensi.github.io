@@ -8,7 +8,7 @@
     <link href="undefined2019/10/23/Elgg%20%E7%B3%BB%E7%BB%9F%20CSRF%20%E6%94%BB%E5%87%BB%E5%AE%9E%E9%AA%8C/"/>
     <url>2019/10/23/Elgg%20%E7%B3%BB%E7%BB%9F%20CSRF%20%E6%94%BB%E5%87%BB%E5%AE%9E%E9%AA%8C/</url>
     
-    <content type="html"><![CDATA[<p>CSRF攻击涉及用户受害者、受信任的网站和恶意网站。<br>当受害者与受信任的站点拥有一个活跃的会话的同时，如果访问恶意网站，<br>恶意网站会注入一个HTTP请求到受信任的站点，从而破话用户的信息。</p><a id="more"></a><p>#实验背景<br>CSRF 攻击总是涉及到三个角色：信赖的网站（Collabtive）、受害者的 session 或 cookie 以及一个恶意网站。<br>受害者会同时访问恶意网站与受信任的站点会话的时候。攻击包括一系列步骤，如下:</p><p>-受害者用户使用他/她的用户名和密码登录到可信站点,从而创建一个新的会话。<br>-受信任站点存储受害者会话的 cookie 或 session 在受害者用户的 web 浏览器端。<br>-受害者用户在不退出信任网站时就去访问恶意网站。<br>-恶意网站的网页发送一个请求到受害者的受信任的站点用户的浏览器。<br>-web 浏览器将自动连接会话 cookie，因为它是恶意的要求针对可信站点。<br>-受信任的站点如果受到 CSRF 攻击，攻击者的一些恶意的请求会被攻击者发送给信任站点。<br>恶意网站可以建立HTTP GET或POST请求到受信任的站点。一些HTML标签,比如img iframe,框架,形式没有限制的URL,<br>可以在他们的使用属性中。img,iframe,框架可用于构造GET请求。<br>HTML表单标签可用于构造POST请求。构造GET请求是相对容易的,因为它甚至不需要JavaScript的帮助;<br>构造POST请求需要JavaScript。因为Collabtive只针对后者,本实验的任务将只涉及HTTP POST请求。</p><p>#预备知识：什么是CSRF</p><blockquote><p>百度百科–CSRF<br>CSRF(Cross-site request forgery)：中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF；<br>作用：攻击者盗用了你的身份，以你的名义发送恶意请求；<br>造成的危害包括：个人隐私泄露以及财产安全，以受害者的名义发送邮件、消息、盗取账号，甚至于购买商品，虚拟货币转账等。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>CSRF攻击涉及用户受害者、受信任的网站和恶意网站。<br>当受害者与受信任的站点拥有一个活跃的会话的同时，如果访问恶意网站，<br>恶意网站会注入一个HTTP请求到受信任的站点，从而破话用户的信息。</p><a id="more"></a><p>#实验背景<br>CSRF 攻击总是涉及到三个角色：信赖的网站（Collabtive）、受害者的 session 或 cookie 以及一个恶意网站。<br>受害者会同时访问恶意网站与受信任的站点会话的时候。攻击包括一系列步骤，如下:</p><p>-受害者用户使用他/她的用户名和密码登录到可信站点,从而创建一个新的会话。<br>-受信任站点存储受害者会话的 cookie 或 session 在受害者用户的 web 浏览器端。<br>-受害者用户在不退出信任网站时就去访问恶意网站。<br>-恶意网站的网页发送一个请求到受害者的受信任的站点用户的浏览器。<br>-web 浏览器将自动连接会话 cookie，因为它是恶意的要求针对可信站点。<br>-受信任的站点如果受到 CSRF 攻击，攻击者的一些恶意的请求会被攻击者发送给信任站点。<br>恶意网站可以建立HTTP GET或POST请求到受信任的站点。一些HTML标签,比如img iframe,框架,形式没有限制的URL,<br>可以在他们的使用属性中。img,iframe,框架可用于构造GET请求。<br>HTML表单标签可用于构造POST请求。构造GET请求是相对容易的,因为它甚至不需要JavaScript的帮助;<br>构造POST请求需要JavaScript。因为Collabtive只针对后者,本实验的任务将只涉及HTTP POST请求。</p><p>#预备知识：什么是CSRF</p><blockquote><p>百度百科–CSRF<br>CSRF(Cross-site request forgery)：中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF；<br>作用：攻击者盗用了你的身份，以你的名义发送恶意请求；<br>造成的危害包括：个人隐私泄露以及财产安全，以受害者的名义发送邮件、消息、盗取账号，甚至于购买商品，虚拟货币转账等。</p></blockquote><table><thead><tr><th>资产</th><th>负债</th><th>股东权益</th></tr></thead><tbody><tr><td>在建工程</td><td>贷款</td><td>股本</td></tr></tbody></table>  <table><thead><tr><th>资产</th><th>负债</th><th>股东权益</th></tr></thead><tbody><tr><td>在建工程</td><td>贷款</td><td>股本</td></tr></tbody></table>]]></content>
     
     
     <categories>
@@ -54,6 +54,43 @@
   
   
   <entry>
+    <title>测试1</title>
+    <link href="undefined2018/04/25/test1/"/>
+    <url>2018/04/25/test1/</url>
+    
+    <content type="html"><![CDATA[<img src="https://faithlove.github.io/pic/2018/RMTP_1/topPicPre.png" srcset="/img/loading.gif" width=100% />哇，漂亮的小姐姐(❤ ω ❤)<a id="more"></a><img src="/img/favicon.png" srcset="/img/loading.gif" class="[class names]" title="[width] [height] title text " alt="alt text"><pre><code>title: xxxxxdate: 2085-01-16 07:33:44tags: [hexo]photos:http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpghttp://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg</code></pre><p>作者：格子林ll<br>链接：<a href="https://www.jianshu.com/p/e0058573964c" target="_blank" rel="noopener">https://www.jianshu.com/p/e0058573964c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Diary</category>
+      
+      <category>Java</category>
+      
+      <category>Python</category>
+      
+      <category>javaScript</category>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>标签1</tag>
+      
+      <tag>标签2</tag>
+      
+      <tag>标签3</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>测试</title>
     <link href="undefined2018/04/25/test/"/>
     <url>2018/04/25/test/</url>
@@ -85,43 +122,6 @@
       <tag>标签3</tag>
       
       <tag>标签4</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>测试1</title>
-    <link href="undefined2018/04/25/test1/"/>
-    <url>2018/04/25/test1/</url>
-    
-    <content type="html"><![CDATA[<img src="https://faithlove.github.io/pic/2018/RMTP_1/topPicPre.png" srcset="/img/loading.gif" width=100% />哇，漂亮的小姐姐(❤ ω ❤)<a id="more"></a><img src="/img/favicon.png" srcset="/img/loading.gif" class="[class names]" title="[width] [height] title text " alt="alt text"><pre><code>title: xxxxxdate: 2085-01-16 07:33:44tags: [hexo]photos:http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpghttp://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg</code></pre><p>作者：格子林ll<br>链接：<a href="https://www.jianshu.com/p/e0058573964c" target="_blank" rel="noopener">https://www.jianshu.com/p/e0058573964c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Diary</category>
-      
-      <category>Java</category>
-      
-      <category>Python</category>
-      
-      <category>javaScript</category>
-      
-      <category>Life</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>标签1</tag>
-      
-      <tag>标签2</tag>
-      
-      <tag>标签3</tag>
       
     </tags>
     
