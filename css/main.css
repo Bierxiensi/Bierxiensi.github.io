@@ -66,19 +66,19 @@ body a:hover {
 .navbar {
   background-color: transparent;
   font-size: 0.875rem;
-  color: white;
+  color: #3c4858;
 }
 .navbar a {
-  color: white;
+  color: #3c4858;
 }
 .navbar a:hover {
   background-color: rgba(0,0,0,0.1);
 }
 .navbar-custom {
-  color: white;
+  color: #3c4858;
 }
 .navbar-custom a {
-  color: white;
+  color: #3c4858;
 }
 .top-nav-collapse {
   background-color: #2f4154;
