@@ -99,12 +99,12 @@
   cursor: pointer;
 }
 #donateBox #AliPay {
-  /*background-image: url(/images/donate/alipay.svg);*/
-  background-image: url(/images/donate/alipay.jpg);
+  background-image: url(/images/donate/alipay.svg);
+  /*background-image: url(/images/donate/alipay.jpg);*/
 }
 #donateBox #WeChat {
-  /*background-image: url(/images/donate/wechat.svg);*/
-  background-image: url(/images/donate/wechat.jpg);
+  background-image: url(/images/donate/wechat.svg);
+  /*background-image: url(/images/donate/wechat.jpg);*/
 }
 #QRBox {
   position: relative;

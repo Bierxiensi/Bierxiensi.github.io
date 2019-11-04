@@ -1494,8 +1494,8 @@ a:hover,a:active {
     position:absolute;
     bottom:-16px;
     height:6px;
-    background-color:#fe9600;
-    /*background-color:#FFBFCE;*/
+    /*background-color:#fe9600;*/
+    background-color:#FFBFCE;
     width:100%;
     max-width:0;
     transition:max-width .25s ease-in-out
@@ -1678,8 +1678,8 @@ a:hover,a:active {
     color:#504e4e
 }
 .entry-title a:hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 
 .p-time {
@@ -2016,10 +2016,10 @@ i.iconfont.hotpost {
 }
 .navigator i:hover {
     color:#fff;
-    background:orange;
-    border:2px solid orange;
-    /*background:#FFBFCE;*/
-    /*border:2px solid #FFBFCE;*/
+    /*background:orange;*/
+    /*border:2px solid orange;*/
+    background:#FFBFCE;
+    border:2px solid #FFBFCE;
     -webkit-transition:all .2s ease-in-out;
     -moz-transition:all .2s ease-in-out;
     -o-transition:all .2s ease-in-out;
@@ -2041,8 +2041,8 @@ i.iconfont.hotpost {
     color:#b9b9b9
 }
 .site-info a:hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .footertext p {
     margin-bottom:8px
@@ -2151,10 +2151,10 @@ i.iconfont.hotpost {
     text-decoration:underline dotted rgba(0,0,0,.1)
 }
 .entry-content a:hover {
-    color:orange;
-    text-decoration:underline orange
-    /*color:#FFBFCE;*/
-    /*text-decoration:underline #FFBFCE*/
+    /*color:orange;*/
+    /*text-decoration:underline orange*/
+    color:#FFBFCE;
+    text-decoration:underline #FFBFCE
 }
 h1.entry-title {
     font-size:24px;
@@ -2334,8 +2334,8 @@ h1.page-title.mb- {
     margin-right:5px
 }
 .post-tags a:hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .post-tags i {
     margin-right:5px
@@ -2395,8 +2395,8 @@ h1.page-title.mb- {
     margin-right:10px
 }
 .post-share ul li a:hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .post-share .show-share {
     margin-left:10px;
@@ -3035,8 +3035,8 @@ h1.works-title {
     font-style:italic;
     font-size:20px;
     font-weight:400;
-    color:orange;
-    /*color:#FFBFCE;*/
+    /*color:orange;*/
+    color:#FFBFCE;
     margin-left:30px;
     margin-top:50px
 }
@@ -3062,8 +3062,8 @@ span.time {
 .ar-time i {
     padding:10px;
     border-radius:100px;
-    background:orange;
-    /*background:#FFBFCE;*/
+    /*background:orange;*/
+    background:#FFBFCE;
     color:#fff
 }
 .ar-time {
@@ -3089,8 +3089,8 @@ span.time {
 span.ar-circle {
     height:10px;
     width:10px;
-    background:orange;
-    /*background:#FFBFCE;*/
+    /*background:orange;*/
+    background:#FFBFCE;
     display:inline-block;
     position:absolute;
     left:-5px;
@@ -3172,8 +3172,8 @@ header.page-header {
     -ms-transform:rotate(360deg)
 }
 span.sitename {
-    color:orange;
-    /*color:#FFBFCE;*/
+    /*color:orange;*/
+    color:#FFBFCE;
     padding-bottom:10px;
     display:block;
     -webkit-transition:all .3s;
@@ -3204,13 +3204,13 @@ span.sitename {
 }
 .link-title span.fake-title {
     padding-left:10px;
-    border-left:3px solid orange
-    /*border-left:3px solid #FFBFCE*/
+    /*border-left:3px solid orange*/
+    border-left:3px solid #FFBFCE
 }
 .links ul li:before {
     content:"";
-    background-color:orange;
-    /*background-color:#FFBFCE;*/
+    /*background-color:orange;*/
+    background-color:#FFBFCE;
     -webkit-transform:skew(45deg,0);
     transform:skew(45deg,0);
     width:0;
@@ -3224,8 +3224,8 @@ span.sitename {
 }
 .links ul li:hover {
     color:#27323a;
-    border:1px solid orange
-    /*border:1px solid #FFBFCE*/
+    /*border:1px solid orange*/
+    border:1px solid #FFBFCE
 }
 .links ul li:hover:before {
     width:180%
@@ -3502,8 +3502,8 @@ a.page-numbers {
     font-weight:600
 }
 .comment h4 a:hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .comment hr {
     clear:both;
@@ -3989,7 +3989,7 @@ li.feature-2 {
     width: 100%;
     z-index: 0;
 }
-}.blank {
+.blank {
     padding-top:80px;
     background-color:rgba(255,255,255,1)
 }
@@ -4343,7 +4343,7 @@ i.iconfont.js-toggle-search.iconsearch {
 }
 .s-search input {
     font-size:1rem;
-    background:#none;
+    background: #ffd8dc;
     padding:12px 24px 12px 64px;
     width:100%;
     outline:0;
@@ -4380,8 +4380,8 @@ i.iconfont.js-toggle-search.iconsearch {
     padding:10px 0
 }
 .sorry li a:hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .sorry-inner {
     padding:20px;
@@ -4396,28 +4396,27 @@ i.iconfont.js-toggle-search.iconsearch {
 .err-button.back a {
     padding:10px 30px;
     margin:0 10px;
-    border:1px solid orange;
-    /*border:1px solid #FFBFCE;*/
-    color:orange;
-    /*color:#FFBFCE;*/
+    border:1px solid #FFBFCE;
+    /*color:orange;*/
+    color:#FFBFCE;
     -webkit-border-radius:50px;
     -moz-border-radius:50px;
     border-radius:50px
 }
 #gohome {
-    background:orange;
-    /*background:#FFBFCE;*/
+    /*background:orange;*/
+    background:#FFBFCE;
     color:#fff
 }
 .err-button.back a:hover {
-    -webkit-box-shadow:0 0 4px rgba(255,165,0,.85);
-    -moz-box-shadow:0 0 4px rgba(255,165,0,.85);
-    -o-box-shadow:0 0 4px rgba(255,165,0,.85);
-    box-shadow:0 0 4px rgba(255,165,0,.85)
-    /*-webkit-box-shadow:0 0 4px #FFBFCE;*/
-    /*-moz-box-shadow:0 0 4px #FFBFCE;*/
-    /*-o-box-shadow:0 0 4px #FFBFCE;*/
-    /*box-shadow:0 0 4px #FFBFCE*/
+    /*-webkit-box-shadow:0 0 4px rgba(255,165,0,.85);*/
+    /*-moz-box-shadow:0 0 4px rgba(255,165,0,.85);*/
+    /*-o-box-shadow:0 0 4px rgba(255,165,0,.85);*/
+    /*box-shadow:0 0 4px rgba(255,165,0,.85)*/
+    -webkit-box-shadow:0 0 4px #FFBFCE;
+    -moz-box-shadow:0 0 4px #FFBFCE;
+    -o-box-shadow:0 0 4px #FFBFCE;
+    box-shadow:0 0 4px #FFBFCE
 }
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer {
     display:none
@@ -4523,8 +4522,8 @@ embed,iframe,object {
     position:absolute
 }
 #nprogress .bar {
-    background:orange;
-    /*background:#FFBFCE;*/
+    /*background:orange;*/
+    background:#FFBFCE;
     position:fixed;
     z-index:1031;
     top:0;
@@ -4560,10 +4559,10 @@ embed,iframe,object {
     height:20px;
     box-sizing:border-box;
     border:solid 3px transparent;
-    border-top-color:orange;
-    border-left-color:orange;
-    /*border-top-color:#FFBFCE;*/
-    /*border-left-color:#FFBFCE;*/
+    /*border-top-color:orange;*/
+    /*border-left-color:orange;*/
+    border-top-color:#FFBFCE;
+    border-left-color:#FFBFCE;
     border-radius:50%;
     -webkit-animation:nprogress-spinner 400ms linear infinite;
     animation:nprogress-spinner 400ms linear infinite
@@ -4667,10 +4666,10 @@ i.iconfont.down {
     font-size:15px
 }
 #pagination a:hover {
-    border:1px solid orange;
-    color:orange
-    /*border:1px solid #FFBFCE;*/
-    /*color:#FFBFCE*/
+    /*border:1px solid orange;*/
+    /*color:orange*/
+    border:1px solid #FFBFCE;
+    color:#FFBFCE
 }
 #pagination .loading {
     background:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg");
@@ -4833,8 +4832,8 @@ i.iconfont.down {
         display:none
     }
     .links ul li:hover .sitename {
-        color:orange
-        /*color:#FFBFCE*/
+        /*color:orange*/
+        color:#FFBFCE
     }
     .links ul li:hover .linkdes {
         color:#949494;
@@ -5047,8 +5046,8 @@ i.iconfont.js-toggle-search.iconsearch {
 }
 #mo-nav ul li a:hover {
     cursor:pointer;
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .we-content li {
     height:250px
@@ -5843,13 +5842,13 @@ button.botui-actions-buttons-button {
     width:auto
 }
 .logolink a:hover .sakurasono {
-    background-color:orange;
-    /*background-color:#FFBFCE;*/
+    /*background-color:orange;*/
+    background-color:#FFBFCE;
     color:#fff
 }
 .logolink a:hover .shironeko,.logolink a:hover rt {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .logolink.moe-mashiro a {
     color:#464646;
@@ -6232,8 +6231,8 @@ button.botui-actions-buttons-button {
 }
 @media(min-width:861px) {
     .hide-live2d {
-    background-color:orange;
-    /*background-color:#FFBFCE;*/
+    /*background-color:orange;*/
+    background-color:#FFBFCE;
     bottom:156px;
     visibility:visible;
     min-height:38.75px
@@ -6641,8 +6640,8 @@ progress {
     color:#000
 }
 .art .art-content #archives a:hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .art .art-content #archives .al_year {
     padding-left:100px
@@ -6793,8 +6792,8 @@ a.toc-link {
     width:2px
 }
 .is-active-link::before {
-    background-color:orange !important
-    /*background-color:#FFBFCE !important*/
+    /*background-color:orange !important*/
+    background-color:#FFBFCE !important
 }
 .flipx {
     -moz-transform:scaleX(-1);
@@ -6928,12 +6927,12 @@ to {
 }
 .motion-switcher-table th:hover {
     background-color:rgba(245,245,245,.5);
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .motion-switcher-table .on-hover {
-    color:orange
-    /*color:#FFBFCE*/
+    /*color:orange*/
+    color:#FFBFCE
 }
 .motion-container {
     height:110px;
@@ -7165,10 +7164,10 @@ to {
     cursor:pointer
 }
 .insert-image-tips:hover {
-    color:orange;
-    border:1px solid orange
-    /*color:#FFBFCE;*/
-    /*border:1px solid #FFBFCE*/
+    /*color:orange;*/
+    /*border:1px solid orange*/
+    color:#FFBFCE;
+    border:1px solid #FFBFCE
 }
 .insert-image-button {
     opacity:0;
