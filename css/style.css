@@ -864,6 +864,7 @@ blockquote:before {
     top:-25px;
     left:12px;
     color:orange;
+    /*color:#FFBFCE;*/
     font-family:FontAwesome
 }
 blockquote:after {
@@ -873,6 +874,7 @@ blockquote:after {
     bottom:-25px;
     right:-5px;
     color:orange;
+    /*color:#FFBFCE;*/
     font-family:FontAwesome
 }
 blockquote p {
@@ -1022,6 +1024,7 @@ a {
 }
 a:hover,a:focus,a:active {
     color:orange
+    /*color:#FFBFCE*/
 }
 a:focus {
     outline:0
@@ -1029,6 +1032,7 @@ a:focus {
 a:hover,a:active {
     outline:0;
     color:orange
+    /*color:#FFBFCE*/
 }
 .site-top {
     width:100%;
@@ -1354,6 +1358,7 @@ a:hover,a:active {
     position:fixed;
     left:0;
     background:rgba(255,255,255,.95);
+    /*background: rgba(255, 216, 220, 0.95);*/
     box-shadow:0 1px 40px -8px rgba(0,0,0,.5)
 }
 .gizle {
@@ -1384,6 +1389,7 @@ a:hover,a:active {
 }
 .site-title a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .site-title img {
     height:40px;
@@ -1480,6 +1486,7 @@ a:hover,a:active {
 }
 .site-top ul li a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .site-top ul li a:after {
     content:"";
@@ -1488,6 +1495,7 @@ a:hover,a:active {
     bottom:-16px;
     height:6px;
     background-color:#fe9600;
+    /*background-color:#FFBFCE;*/
     width:100%;
     max-width:0;
     transition:max-width .25s ease-in-out
@@ -1671,7 +1679,9 @@ a:hover,a:active {
 }
 .entry-title a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
+
 .p-time {
     position:absolute;
     right:0;
@@ -2008,6 +2018,8 @@ i.iconfont.hotpost {
     color:#fff;
     background:orange;
     border:2px solid orange;
+    /*background:#FFBFCE;*/
+    /*border:2px solid #FFBFCE;*/
     -webkit-transition:all .2s ease-in-out;
     -moz-transition:all .2s ease-in-out;
     -o-transition:all .2s ease-in-out;
@@ -2030,6 +2042,7 @@ i.iconfont.hotpost {
 }
 .site-info a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .footertext p {
     margin-bottom:8px
@@ -2140,6 +2153,8 @@ i.iconfont.hotpost {
 .entry-content a:hover {
     color:orange;
     text-decoration:underline orange
+    /*color:#FFBFCE;*/
+    /*text-decoration:underline #FFBFCE*/
 }
 h1.entry-title {
     font-size:24px;
@@ -2320,6 +2335,7 @@ h1.page-title.mb- {
 }
 .post-tags a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .post-tags i {
     margin-right:5px
@@ -2380,6 +2396,7 @@ h1.page-title.mb- {
 }
 .post-share ul li a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .post-share .show-share {
     margin-left:10px;
@@ -3019,6 +3036,7 @@ h1.works-title {
     font-size:20px;
     font-weight:400;
     color:orange;
+    /*color:#FFBFCE;*/
     margin-left:30px;
     margin-top:50px
 }
@@ -3045,6 +3063,7 @@ span.time {
     padding:10px;
     border-radius:100px;
     background:orange;
+    /*background:#FFBFCE;*/
     color:#fff
 }
 .ar-time {
@@ -3071,6 +3090,7 @@ span.ar-circle {
     height:10px;
     width:10px;
     background:orange;
+    /*background:#FFBFCE;*/
     display:inline-block;
     position:absolute;
     left:-5px;
@@ -3153,6 +3173,7 @@ header.page-header {
 }
 span.sitename {
     color:orange;
+    /*color:#FFBFCE;*/
     padding-bottom:10px;
     display:block;
     -webkit-transition:all .3s;
@@ -3184,10 +3205,12 @@ span.sitename {
 .link-title span.fake-title {
     padding-left:10px;
     border-left:3px solid orange
+    /*border-left:3px solid #FFBFCE*/
 }
 .links ul li:before {
     content:"";
     background-color:orange;
+    /*background-color:#FFBFCE;*/
     -webkit-transform:skew(45deg,0);
     transform:skew(45deg,0);
     width:0;
@@ -3202,6 +3225,7 @@ span.sitename {
 .links ul li:hover {
     color:#27323a;
     border:1px solid orange
+    /*border:1px solid #FFBFCE*/
 }
 .links ul li:hover:before {
     width:180%
@@ -3479,6 +3503,7 @@ a.page-numbers {
 }
 .comment h4 a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .comment hr {
     clear:both;
@@ -3951,7 +3976,7 @@ li.feature-2 {
         top: 98px !important;
     }
     .top-social_v2 li {
-        margin-right: 0px !important; 
+        margin-right: 0px !important;
         cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur),auto !important;
     }
 }
@@ -4356,6 +4381,7 @@ i.iconfont.js-toggle-search.iconsearch {
 }
 .sorry li a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .sorry-inner {
     padding:20px;
@@ -4371,13 +4397,16 @@ i.iconfont.js-toggle-search.iconsearch {
     padding:10px 30px;
     margin:0 10px;
     border:1px solid orange;
+    /*border:1px solid #FFBFCE;*/
     color:orange;
+    /*color:#FFBFCE;*/
     -webkit-border-radius:50px;
     -moz-border-radius:50px;
     border-radius:50px
 }
 #gohome {
     background:orange;
+    /*background:#FFBFCE;*/
     color:#fff
 }
 .err-button.back a:hover {
@@ -4385,6 +4414,10 @@ i.iconfont.js-toggle-search.iconsearch {
     -moz-box-shadow:0 0 4px rgba(255,165,0,.85);
     -o-box-shadow:0 0 4px rgba(255,165,0,.85);
     box-shadow:0 0 4px rgba(255,165,0,.85)
+    /*-webkit-box-shadow:0 0 4px #FFBFCE;*/
+    /*-moz-box-shadow:0 0 4px #FFBFCE;*/
+    /*-o-box-shadow:0 0 4px #FFBFCE;*/
+    /*box-shadow:0 0 4px #FFBFCE*/
 }
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer {
     display:none
@@ -4491,6 +4524,7 @@ embed,iframe,object {
 }
 #nprogress .bar {
     background:orange;
+    /*background:#FFBFCE;*/
     position:fixed;
     z-index:1031;
     top:0;
@@ -4504,7 +4538,7 @@ embed,iframe,object {
     right:0;
     width:100px;
     height:100%;
-    box-shadow:0 0 10px orange,0 0 5px orange;
+    box-shadow:0 0 10px #FFBFCE,0 0 5px #FFBFCE;
     opacity:1;
     -webkit-transform:rotate(3deg) translate(0px,-4px);
     -ms-transform:rotate(3deg) translate(0px,-4px);
@@ -4528,6 +4562,8 @@ embed,iframe,object {
     border:solid 3px transparent;
     border-top-color:orange;
     border-left-color:orange;
+    /*border-top-color:#FFBFCE;*/
+    /*border-left-color:#FFBFCE;*/
     border-radius:50%;
     -webkit-animation:nprogress-spinner 400ms linear infinite;
     animation:nprogress-spinner 400ms linear infinite
@@ -4633,6 +4669,8 @@ i.iconfont.down {
 #pagination a:hover {
     border:1px solid orange;
     color:orange
+    /*border:1px solid #FFBFCE;*/
+    /*color:#FFBFCE*/
 }
 #pagination .loading {
     background:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg");
@@ -4796,6 +4834,7 @@ i.iconfont.down {
     }
     .links ul li:hover .sitename {
         color:orange
+        /*color:#FFBFCE*/
     }
     .links ul li:hover .linkdes {
         color:#949494;
@@ -5009,6 +5048,7 @@ i.iconfont.js-toggle-search.iconsearch {
 #mo-nav ul li a:hover {
     cursor:pointer;
     color:orange
+    /*color:#FFBFCE*/
 }
 .we-content li {
     height:250px
@@ -5804,10 +5844,12 @@ button.botui-actions-buttons-button {
 }
 .logolink a:hover .sakurasono {
     background-color:orange;
+    /*background-color:#FFBFCE;*/
     color:#fff
 }
 .logolink a:hover .shironeko,.logolink a:hover rt {
     color:orange
+    /*color:#FFBFCE*/
 }
 .logolink.moe-mashiro a {
     color:#464646;
@@ -6191,6 +6233,7 @@ button.botui-actions-buttons-button {
 @media(min-width:861px) {
     .hide-live2d {
     background-color:orange;
+    /*background-color:#FFBFCE;*/
     bottom:156px;
     visibility:visible;
     min-height:38.75px
@@ -6599,6 +6642,7 @@ progress {
 }
 .art .art-content #archives a:hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .art .art-content #archives .al_year {
     padding-left:100px
@@ -6750,6 +6794,7 @@ a.toc-link {
 }
 .is-active-link::before {
     background-color:orange !important
+    /*background-color:#FFBFCE !important*/
 }
 .flipx {
     -moz-transform:scaleX(-1);
@@ -6884,9 +6929,11 @@ to {
 .motion-switcher-table th:hover {
     background-color:rgba(245,245,245,.5);
     color:orange
+    /*color:#FFBFCE*/
 }
 .motion-switcher-table .on-hover {
     color:orange
+    /*color:#FFBFCE*/
 }
 .motion-container {
     height:110px;
@@ -7120,6 +7167,8 @@ to {
 .insert-image-tips:hover {
     color:orange;
     border:1px solid orange
+    /*color:#FFBFCE;*/
+    /*border:1px solid #FFBFCE*/
 }
 .insert-image-button {
     opacity:0;
@@ -7134,6 +7183,8 @@ to {
 .insert-image-tips-hover {
     color:orange;
     border:1px solid orange
+    /*color:#FFBFCE;*/
+    /*border:1px solid #FFBFCE*/
 }
 .upload-image-preview {
     display:inline-block;
