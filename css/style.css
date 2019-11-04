@@ -6550,7 +6550,7 @@ to {
 .finish-icon-container {
     font-size:1rem;
     display:-webkit-box;
-    display:box;
+    display: box;
     display:-webkit-flex;
     display:flex;
     -webkit-box-align:center;
@@ -7355,8 +7355,8 @@ to {
     color:#21252b
 }
 .highlight-wrap code::-webkit-scrollbar {
-    height:10x !important;
-    width:10x !important;
+    height: 10x !important;
+    width: 10x !important;
     background-color:#1d1f21 !important
 }
 .highlight-wrap code::-webkit-scrollbar-track {
