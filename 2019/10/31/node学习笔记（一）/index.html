@@ -492,13 +492,158 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>早就听说node.js强大，虽然一直在用node的npm工具，但无奈一直没有写脚本<br>今天有时间看一看，哇，这个node脚本 它又短又强悍，哦呦，不对哦，这和python脚本差不多嘛</p>
+          <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>早就听说node.js强大，虽然一直在用node的npm工具，但无奈一直没有写脚本<br>今天有时间看一看，哇，这个node脚本 它又短又强悍，哦呦，不对哦，这和python脚本差不多嘛</p>
 <img src="/img/node/node%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/node%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/1.jpg" class="[class names]" title="[width] [height] title text " alt="alt text">
 <img src="/img/node/node%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/node%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/4.jpg" class="[class names]" title="[width] [height] title text " alt="alt text">
 
 <p>这段python脚本用的pymysql(另SQLAlchemy的语法看起来类似javaJpa吧)，过程上类似，建立查询，执行sql语句</p>
 <img src="/img/node/node%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/node%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/2.jpg" class="[class names]" title="[width] [height] title text " alt="alt text">
 
+<p>好了，接下来进入正题</p>
+<h1 id="1、Node-js-概述"><a href="#1、Node-js-概述" class="headerlink" title="1、Node.js 概述"></a>1、Node.js 概述</h1><blockquote><ul>
+<li>Node.js 是一个能够在服务器端运行 JavaScript 的开放源代码、跨平台 JavaScript 运行环境。</li>
+<li>Node.js 由 Node.js 基金会持有和维护，并与 Linux 基金会有合作关系。</li>
+<li>Node.js 采用 Google 开发的 V8 运行代码，使用事件驱动、非阻塞和异步输入输出模型等技术来提高性能，可优化应用程序的传输量和规模。这些技术通常用于数据密集的即时应用程序。</li>
+<li>Node.js 大部分基本模块都用 JavaScript 语言编写。<font color=red></li>
+<li>在 Node.js 出现之前，JavaScript 通常作为客户端程序设计语言使用，以JavaScript 写出的程序常在用户的浏览器上运行。Node.js 的出现使 JavaScript 也能用于服务端编程。</font></li>
+<li>Node.js 含有一系列内置模块，使得程序可以脱离 Apache HTTP Server 或 IIS，作为独立服务器运行。</li>
+</ul>
+<footer><strong>维基百科</strong><cite><a href="https://wikipedia.tw.wjbk.site/wiki/Node.js" target="_blank" rel="noopener">wikipedia.tw.wjbk.site/wiki/Node.js</a></cite></footer></blockquote>
+
+<h1 id="2、Node-js-特点"><a href="#2、Node-js-特点" class="headerlink" title="2、Node.js 特点"></a>2、Node.js 特点</h1><ul>
+<li>它是一个 JavaScript 运行环境。</li>
+<li>依赖于 Chrome V8 引擎进行代码解释。</li>
+<li>事件驱动：在 Node 中，客户端请求建立连接，提交数据等行为，会触发相应的事件。在 Node 中，在一个时刻，只能执行一个事件回调函数，但是在执行一个事件回调函数的中途，可以转而处理其他事件，然后返回继续执行原事件的回调函数。</li>
+<li>非阻塞 I/O：Node.js 中采用了非阻塞型 I/O 机制，在执行了访问数据库的代码之后，将立即转而执行其后面的代码，把数据库返回结果的处理代码放在回调函数中，从而提高了程序的执行效率。</li>
+<li>轻量可伸缩，适用于实时数据交互应用。</li>
+<li>单线程：好处是减少内存开销，不用像多线程编程那样处处在意状态同步的问题。缺点是错误会引起整个应用退出。</li>
+</ul>
+<h1 id="3、Node-js-适用场景"><a href="#3、Node-js-适用场景" class="headerlink" title="3、Node.js 适用场景"></a>3、Node.js 适用场景</h1><p>我们从 Node.js 的特点中可以知道 Node.js 擅长处理 I/O，不善于计算（单线程的缺点），因此 Node.js 适用于：</p>
+<ul>
+<li>当应用程序需要处理大量并发的 I/O，而在向客户端发出响应之前，应用程序内部并不需要进行非常复杂的处理的时候，</li>
+<li>Node.js 也非常适合与 web socket 配合，开发长连接的实时交互应用程序。比如：聊天室，博客系统，考试系统等。</li>
+</ul>
+<h2 id="3-1、cmd查看系统中-Node-js-版本"><a href="#3-1、cmd查看系统中-Node-js-版本" class="headerlink" title="3.1、cmd查看系统中 Node.js 版本:"></a>3.1、cmd查看系统中 Node.js 版本:</h2><pre><code>node -v</code></pre><h2 id="3-2、node安装"><a href="#3-2、node安装" class="headerlink" title="3.2、node安装:"></a>3.2、node安装:</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
+<h1 id="4、NPM-介绍"><a href="#4、NPM-介绍" class="headerlink" title="4、NPM 介绍"></a>4、NPM 介绍</h1><p>NPM 是随同 Node.js 一起安装的包管理工具。因此当我们安装好 Node.js 的时候，也安装好了 NPM。<br>NPM 是一个命令行工具，用于从 NPM Registry 中下载、安装 Node.js 程序，同时解决依赖问题。</p>
+<p>cmd查看系统中 NPM 版本：</p>
+<pre><code>npm -v</code></pre><h1 id="5、Node-js-REPL-交互式解释器"><a href="#5、Node-js-REPL-交互式解释器" class="headerlink" title="5、Node.js REPL(交互式解释器)"></a>5、Node.js REPL(交互式解释器)</h1><blockquote><p>Node.js REPL(Read Eval Print Loop:交互式解释器) 表示一个电脑的环境，类似 Window 系统的终端或 Unix/Linux shell，我们可以在终端中输入命令，并接收系统的响应。<br>Node 自带了交互式解释器，可以执行以下任务：</p>
+<ul>
+<li>读取 - 读取用户输入，解析输入了Javascript 数据结构并存储在内存中。</li>
+<li>执行 - 执行输入的数据结构</li>
+<li>打印 - 输出结果</li>
+<li>循环 - 循环操作以上步骤直到用户两次按下 ctrl-c 按钮退出。<br>Node 的交互式解释器可以很好的调试 Javascript 代码。</li>
+</ul>
+<footer><strong>菜鸟教程</strong><cite><a href="https://www.runoob.com/nodejs/nodejs-repl.html" target="_blank" rel="noopener">www.runoob.com/nodejs/nodejs-repl.html</a></cite></footer></blockquote>
+
+<h2 id="5-1、REPL-常用命令"><a href="#5-1、REPL-常用命令" class="headerlink" title="5.1、REPL 常用命令"></a>5.1、REPL 常用命令</h2><ul>
+<li>Ctrl + C - 退出当前终端</li>
+<li>Ctrl + C - 连续按两次退出 Node REPL</li>
+<li>Ctrl + D - 退出 Node REPL</li>
+<li>向上/向下 键 - 查看输入的历史命令</li>
+<li>tab 键 - 列出当前命令</li>
+<li>help - 列出使用命令</li>
+<li>break - 退出多行表达式</li>
+<li>clear - 退出多行表达式</li>
+<li>save filename - 保存当前的 Node REPL 会话到指定文件</li>
+<li>load filename - 载入当前 Node REPL 会话的文件内容。</li>
+</ul>
+<h2 id="5-2、启动-Node-终端"><a href="#5-2、启动-Node-终端" class="headerlink" title="5.2、启动 Node 终端"></a>5.2、启动 Node 终端</h2><p>输入以下命令来启动 Node 终端：</p>
+<pre><code>node</code></pre><h2 id="5-3、简单的表达式运算"><a href="#5-3、简单的表达式运算" class="headerlink" title="5.3、简单的表达式运算"></a>5.3、简单的表达式运算</h2><pre><code>$ node
+> 1 +4
+5
+> 5 / 2
+2.5
+> 3 * 6
+18
+> 4 - 1
+3
+> 1 + ( 2 * 3 ) - 4
+3
+></code></pre>
+
+<h2 id="5-4、使用变量"><a href="#5-4、使用变量" class="headerlink" title="5.4、使用变量"></a>5.4、使用变量</h2><p>可以将数据存储在变量中，并在需要的时候使用它。<br>变量声明需要使用 var 关键字，如果没有使用 var 关键字变量会直接打印出来。<br>使用 var 关键字的变量可以使用 console.log() 来输出变量。</p>
+<pre><code>$ node
+> x = 10
+10
+> var y = 10
+undefined
+> x + y
+20
+> console.log("Hello zxyaily")
+Hello zxyaily
+undefined
+> console.log("www.zxyaily.top")
+www.zxyaily.top
+undefined</code></pre>
+
+<h2 id="5-5、多行表达式"><a href="#5-5、多行表达式" class="headerlink" title="5.5、多行表达式"></a>5.5、多行表达式</h2><pre><code>> for(var i=0;i<10;i++){
+... console.log("mrZ ❤ missL");
+... }
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+mrZ ❤ missL
+undefined
+> </code></pre>
+
+<h2 id="5-6、下划线变量"><a href="#5-6、下划线变量" class="headerlink" title="5.6、下划线变量"></a>5.6、下划线变量</h2><p>可以使用下划线(_)获取上一个表达式的运算结果：</p>
+<pre><code>$ node
+> var x = 10
+undefined
+> var y = 20
+undefined
+> x + y
+30
+> var sum = _
+undefined
+> console.log(sum)
+30
+undefined
+></code></pre>
+
+<h1 id="6、Node-js-全局对象"><a href="#6、Node-js-全局对象" class="headerlink" title="6、Node.js 全局对象"></a>6、Node.js 全局对象</h1><p>在 JavaScript 中全局对象通常是 window，而在 Node.js 中全局对象是 globa，<br>所有全局变量（除了 global 本身以外）都是 global 对象的属性，我们可以直接访问到 global 的属性。</p>
+<h2 id="6-1、全局变量"><a href="#6-1、全局变量" class="headerlink" title="6.1、全局变量"></a>6.1、全局变量</h2><p>global 最根本的作用是作为全局变量的宿主。按照 ECMAScript 的定义，满足以下条 件的变量是全局变量：</p>
+<ul>
+<li>在最外层定义的变量；</li>
+<li>全局对象的属性；</li>
+<li>隐式定义的变量（未定义直接赋值的变量）。</li>
+</ul>
+<p>定义一个全局变量的时候，这个变量同时也会成为全局对象的属性，反之亦然。在 Node.js 中不可能在最外层定义变量，因为所有用户代码都是属于当前模块的，而模块本身不是最外层上下文。<font color=red>定义变量一定要使用 var 关键字，因为全局变量会污染命名空间。</font><br>详情见此例 <a href="https://wikipedia.tw.wjbk.site/wiki/Node.js" target="_blank" rel="noopener">https://wikipedia.tw.wjbk.site/wiki/Node.js</a></p>
+<h2 id="6-2、常用的全局变量和全局函数"><a href="#6-2、常用的全局变量和全局函数" class="headerlink" title="6.2、常用的全局变量和全局函数"></a>6.2、常用的全局变量和全局函数</h2><h3 id="filename"><a href="#filename" class="headerlink" title="__filename"></a>__filename</h3><p>表示当前正在执行的脚本的文件名。它将输出文件所在位置的绝对路径，且和命令行参数所指定的文件名不一定相同。<br>如果在模块中，返回的值是模块文件的路径。比如创建一个叫 hello.js 的文件，输入以下代码：</p>
+<pre><code>console.log(__filename);</code></pre><p>运行效果</p>
+<pre><code>/home/project/hello.js</code></pre><h3 id="dirname"><a href="#dirname" class="headerlink" title="__dirname"></a>__dirname</h3><p>表示当前执行脚本所在的目录。比如创建一个 hello.js 的文件，输入以下代码：</p>
+<pre><code>console.log(__filename);</code></pre><p>运行效果</p>
+<pre><code>/home/project</code></pre><h3 id="setTimeout-cb-ms"><a href="#setTimeout-cb-ms" class="headerlink" title="setTimeout(cb, ms)"></a>setTimeout(cb, ms)</h3><p>全局函数在指定的毫秒(ms)数后执行指定函数(cb),只执行一次函数。比如创建一个 hello.js 的文件，输入以下代码：</p>
+<pre><code>function hello(){
+  console.log( "Hello, syl!");
+}
+// 三秒后执行以上函数
+setTimeout(hello, 3000);</code></pre>
+
+<h3 id="clearTimeout-t"><a href="#clearTimeout-t" class="headerlink" title="clearTimeout(t)"></a>clearTimeout(t)</h3><p>用于停止一个之前通过 setTimeout() 创建的定时器。 参数 t 是通过 setTimeout() 函数创建的定时器。比如清除上面案例的定时器：</p>
+<pre><code>function hello(){
+  console.log( "Hello, syl!");
+}
+// 三秒后执行以上函数
+var t = setTimeout(hello, 3000);
+// 清除定时器
+clearTimeout(t);</code></pre>
+
+<h3 id="setInterval-cb-ms"><a href="#setInterval-cb-ms" class="headerlink" title="setInterval(cb, ms)"></a>setInterval(cb, ms)</h3><p>与 setTimeout(cb, ms) 类似，不同的是这个方法会不停的执行函数。直到 clearInterval() 被调用或窗口被关闭，也可以按 Ctrl+C 停止。比如创建一个 hello.js 的文件，输入以下代码：</p>
+<pre><code>function hello(){
+  console.log( "Hello, syl!");
+}
+// 三秒后执行以上函数
+var t = setInterval(hello, 3000);</code></pre>
+
+<h3 id="console-log"><a href="#console-log" class="headerlink" title="console.log()"></a>console.log()</h3><p>全局函数用于进行标准输出流的输出，即在控制台中显示一行字符串，和 JavaScript 中的使用一样。</p>
+<p><font color=red>console 用于提供控制台标准输出，它是由 Internet Explorer 的 JScript 引擎提供的调试工具，后来逐渐成为浏览器的实施标准。Node.js 沿用了这个标准，提供与习惯行为一致的 console 对象，用于向标准输出流（stdout）或标准错误流（stderr）输出字符。</font><br>详情见console.log篇</p>
 
         </div>
         <!-- .entry-content -->
@@ -629,7 +774,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 zxy<br>
+      &copy; 2020 zxy<br>
       powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -656,7 +801,7 @@
         <!--  Sometimes your whole life boils down to one insame move.-->
         <!--  总字数  -->
         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span class="post-count">本站4.8k字</span>
+        <span class="post-count">本站11.2k字</span>
         <!--  本站总访问量  -->
         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span id="busuanzi_container_site_pv">pv<span id="busuanzi_value_site_pv"></span>次</span>
